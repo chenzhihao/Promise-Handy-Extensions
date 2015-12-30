@@ -1,0 +1,23 @@
+{
+  "name": "promise-handy-extension",
+  "version": "1.0.0",
+  "description": "Some handy extension for es6 promise such as Promise.reduce, Promise.series.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenzhihao/Promise-Handy-Extensions.git"
+  },
+  "keywords": [
+    "Promise.reduce",
+    "Promise.series"
+  ],
+  "author": "Zhihao Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chenzhihao/Promise-Handy-Extensions/issues"
+  },
+  "homepage": "https://github.com/chenzhihao/Promise-Handy-Extensions#readme"
+}
