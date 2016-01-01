@@ -33,6 +33,7 @@ describe('#Promise.series()', function () {
       Promise.series([10, 2, 4], input=> input
       ).should.eventually.eql([10, 2, 4]).notify(done);
     });
+
     it('catch rejected promise', function (done) {
       Promise.series([10, 2, 4], (input)=> {
         if (input < 5) {
@@ -42,6 +43,7 @@ describe('#Promise.series()', function () {
         }
       }).should.be.rejectedWith(Error, 'input should be bigger than 5').notify(done);
     });
+
   });
   describe('2. resolve number array in async way:', function () {
     it('get correct results', function (done) {
@@ -50,12 +52,14 @@ describe('#Promise.series()', function () {
         }
       ).should.eventually.eql([2, 4, 6]).notify(done);
     });
+
     it('catch rejected promise', function (done) {
       Promise.series([2, 3, 5], (input)=> {
           return asyncCall(input);
         }
       ).should.be.rejectedWith({rejectedValue: 3}).notify(done);
     });
+
     it('should execute task serially', function (done) {
       let executeOrder = [];
       Promise.series([300, 1, 2], (input)=> {
@@ -66,5 +70,6 @@ describe('#Promise.series()', function () {
         {result: 2, executeOrder: [300, 1, 2]}
       ]).notify(done);
     });
+
   });
 });
