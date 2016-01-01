@@ -6,8 +6,8 @@ config = {
     entry: [
         path.resolve(__dirname, 'src/index.js')],
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'release'),
+        filename: 'promiseHandyExtension.min.js',
         libraryTarget: 'umd',
         library: ['promiseHandyExtension']
     },
@@ -30,7 +30,11 @@ config = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ]
 };
 
