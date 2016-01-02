@@ -32,7 +32,11 @@ Use it directly in browse:
 
 ```js
 <script type="text/javascript" src="https://github.com/chenzhihao/Promise-Handy-Extensions/releases/download/1.0/promiseHandyExtension.min.js"></script>
+
+<script type="text/javascript">
+...	
 promiseHandyExtension.default();
+</script>
 ```
 
 Then the Promise object will be extended with these methods:
@@ -63,7 +67,7 @@ The key point here for this method is the exectued order is guaranteed which mea
 
 If one promise is rejected, it will fail fast: Promise.series will reject immediately.
 
-For more detailed example, please check the [test case](https://github.com/chenzhihao/Promise-Handy-Extensions/blob/master/test/series.js) which shows how this handy methods can control your promise execute flow:
+For more detailed example, please check the [test case](https://github.com/chenzhihao/Promise-Handy-Extensions/blob/master/test/series.js) which shows how this handy method can control your promise execute flow:
 
 
 
