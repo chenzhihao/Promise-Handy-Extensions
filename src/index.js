@@ -5,6 +5,16 @@ let promiseHandyExtension = function () {
     Promise.series = series;
   }
 };
+
 promiseHandyExtension.series = series;
 
-export default promiseHandyExtension;
+let executed = false;
+
+function loader () {
+  if (!executed) {
+    executed = true;
+    promiseHandyExtension();
+  }
+}
+
+export default loader();

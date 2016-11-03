@@ -1,5 +1,4 @@
-import handy from '../src/index';
-Promise.series = handy.series;
+import '../src/index';
 
 import chai from 'chai';
 const should = chai.should();
@@ -16,7 +15,6 @@ function asyncCall(input) {
     }, input);
   });
 }
-
 
 function asyncCallWithExecuteOrderRecorded(input, executeOrder) {
   return new Promise((resolve) => {

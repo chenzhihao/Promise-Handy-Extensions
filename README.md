@@ -17,25 +17,21 @@ $ npm install promise-handy-extension
 commonJS:
 
 ```js
-require ('promise-handy-extension').default();
+require ('promise-handy-extension');
 ```
 
 ES6:
 
 ```js
 // ES6:
-import handy = 'promise-handy-extension';
-handy();
+import 'promise-handy-extension';
 ```
 
 Use it directly in browse:
 
 ```js
-<script type="text/javascript" src="https://github.com/chenzhihao/Promise-Handy-Extensions/releases/download/1.0/promiseHandyExtension.min.js"></script>
-
-<script type="text/javascript">
-...	
-promiseHandyExtension.default();
+<script type="text/javascript" src="../release/promiseHandyExtension.min.js"></script>
+...
 </script>
 ```
 
