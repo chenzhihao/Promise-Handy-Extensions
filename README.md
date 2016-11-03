@@ -44,9 +44,8 @@ Promise.reduce
 ```
 
 ### How to use:
-```js
-
 #### Promise.series
+```js
 // an asyncCall:
 function asyncCall(input) {
 	// which will return a promise;
@@ -60,7 +59,7 @@ Promise.series([input1, input2, input3], function(input, index) {
 	// it should be [input1, input2, input3];
 });
 ```
-The key point here for this method is the exectued order is guaranteed which means only when the returned promise **asyncCall(input1)** is resolved, we will execute **asyncCall(input2)** to get the next promise to execute. This is why it called 'series'.
+The key point here for this method is the execution order is guaranteed which means only when the returned promise **asyncCall(input1)** is resolved, we will execute **asyncCall(input2)** to get the next promise to execute. This is why it called 'series'.
 
 If one promise is rejected, it will fail fast: Promise.series will reject immediately.
 
@@ -68,6 +67,9 @@ For more detailed example, please check the [test case](https://github.com/chenz
 
 
 #### Promise.reduce
+
+```js
+
 // an asyncCall:
 function asyncCall(input) {
 	// which will return a promise;
@@ -80,6 +82,14 @@ Promise.reduce([input1, input2, input3], function(prev, curr, currIdx, arr) {
 	console.log(results);
 	// it should be 0 + input1 + input2 + input3;
 });
+
+```
+
+The key point here for this method is the execution order is guaranteed which means only when the returned promise **asyncCall(input1)** is resolved, we will execute **asyncCall(input2)** to get the next promise to execute in reduce way.
+
+If one promise is rejected, it will fail fast: Promise.reduce will reject immediately.
+
+For more detailed example, please check the [test case](https://github.com/chenzhihao/Promise-Handy-Extensions/blob/master/test/reduce.js) which shows how this handy method can control your promise execute flow:
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
