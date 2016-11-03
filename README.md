@@ -46,6 +46,7 @@ Promise.reduce
 ### How to use:
 ```js
 
+#### Promise.series
 // an asyncCall:
 function asyncCall(input) {
 	// which will return a promise;
@@ -66,6 +67,19 @@ If one promise is rejected, it will fail fast: Promise.series will reject immedi
 For more detailed example, please check the [test case](https://github.com/chenzhihao/Promise-Handy-Extensions/blob/master/test/series.js) which shows how this handy method can control your promise execute flow:
 
 
+#### Promise.reduce
+// an asyncCall:
+function asyncCall(input) {
+	// which will return a promise;
+	return Promise.resolve(input);
+}
+
+Promise.reduce([input1, input2, input3], function(prev, curr, currIdx, arr) {
+	return asyncCall(current).then(val=> prev + val);
+}, 0).then((results)=>{
+	console.log(results);
+	// it should be 0 + input1 + input2 + input3;
+});
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)

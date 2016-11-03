@@ -1,20 +1,14 @@
 import series from './series';
+import reduce from './reduce';
 
 let promiseHandyExtension = function () {
   if (Promise) {
     Promise.series = series;
+    Promise.reduce = reduce;
   }
 };
 
 promiseHandyExtension.series = series;
+promiseHandyExtension.reduce = reduce;
 
-let executed = false;
-
-function loader () {
-  if (!executed) {
-    executed = true;
-    promiseHandyExtension();
-  }
-}
-
-export default loader();
+export default promiseHandyExtension();
