@@ -1,9 +1,9 @@
 # Promise-Handy-Extension
 
+[![NPM](https://nodei.co/npm/promise-handy-extension.png)](https://nodei.co/npm/promise-handy-extension/)
+> Promise-Handy-Extension is a pretty simple ES6 promise extension. You can use it in node/browser ENV which has implemented Promises/A+ specification.
+
 [![Build Status](https://travis-ci.org/chenzhihao/Promise-Handy-Extensions.svg)](https://travis-ci.org/chenzhihao/Promise-Handy-Extensions)
-
-Promise-Handy-Extension is a pretty simple ES6 promise extension. You can use it in node/browser ENV which has implemented Promises/A+ specification.
-
 
 ## Installation
 ```bash
