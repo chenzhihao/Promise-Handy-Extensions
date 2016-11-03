@@ -16,7 +16,7 @@
     "Promise.reduce",
     "Promise.series"
   ],
-  "author": "Zhihao Chen",
+  "author": "cabtravis@gmail.com",
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^6.2.0",
